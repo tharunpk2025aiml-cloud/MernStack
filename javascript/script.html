@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <script>
+
+            var age=20;
+            age=30;
+            var age=40;
+            console.log("Age:",age);
+
+            let course="Mern";
+            course="dsa";
+            console.log("Course:",course);
+
+            const pan=50;
+            console.log("Pan:",pan);
+
+            let admin="tharun";
+            let password="tharun!123";
+
+            if(admin==="tharun" && password==="tharun!123")
+        {
+            console.log("Login Successful");
+        }
+        else
+        {
+            console.log("Login unsuccessful");
+        }
+
+        let voter_age=18;
+        let voter_id="yes";
+
+        if(voter_age===18 && voter_id==="yes")
+        {
+            console.log("Eligible");
+        }
+        else{
+            console.log("Not eligible");
+        }
+
+        function student(name,clg="Sece"){
+            console.log(`Hello ${name} welcome to ${clg} college`);
+        }
+        student('Tharun');
+        student('Rajesh');
+
+
+        function employee(name,company,clg="Sece"){
+            console.log(`My name is ${name} I have studied in ${clg} and I am working in ${company}`);
+        }
+        employee('Tharun',"Nividia");
+        employee('Rajesh',"Microsoft");
+
+        let data1=function(){
+            return "Hello Javascript";
+        }
+        console.log(data1());
+
+        let mult1=()=>{
+            return "Arrow Function";
+        }
+        console.log(mult1
+        ());
+
+        let mult=(a,b)=>{
+            return a*b;
+        }
+        console.log(mult(2,4));
+
+        function sece(callback){
+            console.log("Welcome to sece");
+            callback();
+        }
+
+        function stud(){
+            console.log("I am a Student");
+        }
+
+        sece(stud);
+
+        function whatsapp(callback){
+            console.log("Whatsapp!!!")
+            callback();
+        }
+
+        function notification(){
+            console.log("You have a notification");
+        }
+        whatsapp(notification);
+
+
+        let fetch_api=new Promise((resolve,reject)=>{
+            let api=1;
+            if(api){
+                resolve("Food order Successfull");
+            }
+            else{
+                setTimeout(()=>{
+                reject("Food order Failed");
+                },2000)
+            }
+        })
+        fetch_api.then(data=>console.log(data));
+
+
+        </script>
+    </body>
+</html>
