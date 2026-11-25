@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <script>
+            //objects
+            let emp=[
+                {
+                emp_id:101,
+                emp_name:"Tharun",
+                salary:500000,
+                skills:["cpp","Python","Java Script"],
+                company:[c1="TCS",c2="Amazon"]
+            },
+            {
+                emp_id:102,
+                emp_name:"Rajesh",
+                salary:500000,
+                skills:["Python","Java"]
+            },
+        ]
+
+        console.log(emp[0].emp_name);
+        console.log(emp[1].skills[1]);
+
+        for(let i=0;i<3;i++)
+        {
+            console.log(emp[0].skills[i]);
+        }
+
+        //JSON Stringify format(Object to string)
+        
+        let stringify_data=JSON.stringify(emp);
+        console.log(stringify_data);
+
+        //JSON parse method(String to object)
+
+        let parsed_data=JSON.parse(stringify_data);
+        console.log(parsed_data);
+
+        //data copy
+        let copied_data=emp;
+        copied_data[0].salary=800000;
+        console.log(copied_data);
+
+        //shallow copy(spread operator)
+        let shallow_data={...emp[0]};
+        shallow_data.salary=900000;
+        console.log(shallow_data);
+
+        //Deep copy
+        let deep_copy=JSON.parse(JSON.stringify(emp));
+        deep_copy[0].company[0]="Google";
+        console.log(deep_copy);
+
+
+        </script>
+    </body>
+</html>
